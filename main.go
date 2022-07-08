@@ -80,8 +80,8 @@ func StartService() {
 			defer session.Close()
 			err := session.DB(database).C(collection).Find(bson.M{}).All(&users)
 			if err != nil {
-			c.JSON(http.StatusNotFound,
-				gin.H{
+				c.JSON(http.StatusNotFound,
+					gin.H{
 						"status": "failed",
 						"message": "Users are not exist",
 				})
