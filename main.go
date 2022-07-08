@@ -9,7 +9,7 @@ mgo "gopkg.in/mgo.v2"
 "gopkg.in/mgo.v2/bson"
 )
 // database and collection names are statically declared
-const database, collection = "go-mongo-practice", "user"
+const database, collection = "go-mongo-practice", "users"
 // User structure
 type User struct {
 ID                bson.ObjectId `bson:"_id"`
